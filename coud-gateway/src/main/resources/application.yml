@@ -1,8 +1,19 @@
 server:
   port: 8090
+
+
 eureka:
-  client:
-    service-url:
-      default-zone: http://localhost:8081/eureka/
+      instance:
+        hostname: localhost
+      client:
+        serviceUrl:
+          registerWithEureka: true
+          fetchRegistry: false
+          defaultZone: http://localhost:8081/eureka/
+
+
+spring:
+  application:
+    name: gateway
 
 

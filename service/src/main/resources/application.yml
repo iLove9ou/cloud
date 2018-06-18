@@ -7,6 +7,8 @@ spring:
     username: root
     password: root
     driver-class-name: com.mysql.jdbc.Driver
+  application:
+    name: service
 
 
 eureka:
@@ -14,7 +16,9 @@ eureka:
         hostname: localhost
       client:
         serviceUrl:
-          defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+          registerWithEureka: true
+          fetchRegistry: false
+          defaultZone: http://localhost:8081/eureka/
 
 mybatis:
       typeAliasesPackage: com.tony.entity
