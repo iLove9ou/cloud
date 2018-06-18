@@ -8,6 +8,8 @@ spring:
     password: root
     driver-class-name: com.mysql.jdbc.Driver
 
+
+
 eureka:
       instance:
         hostname: localhost
@@ -16,4 +18,9 @@ eureka:
         fetchRegistry: false
         serviceUrl:
           defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+
+mybatis:
+      typeAliasesPackage: com.tony.entity
+      mapperLocations: classpath:/com/*/mapper/*.xml
+      configLocation: classpath:/mybatis/mybatis-config.xml
 
