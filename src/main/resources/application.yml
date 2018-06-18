@@ -21,6 +21,6 @@ eureka:
 
 mybatis:
       typeAliasesPackage: com.tony.entity
-      mapperLocations: classpath:/com/*/mapper/*.xml
+      mapperLocations: classpath:/mapper/*.xml
       configLocation: classpath:/mybatis/mybatis-config.xml
 
