@@ -21,7 +21,7 @@ eureka:
           defaultZone: http://localhost:8081/eureka/
 
 mybatis:
-      typeAliasesPackage: com.tony.entity
+      typeAliasesPackage: service.model
       mapperLocations: classpath:/mapper/*.xml
       configLocation: classpath:/mybatis/mybatis-config.xml
 
