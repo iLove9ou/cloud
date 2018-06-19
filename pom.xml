@@ -19,7 +19,7 @@
     </parent>
 
     <modules>
-        <module>coud-gateway</module>
+        <module>gateway</module>
         <module>discovery</module>
         <module>service</module>
     </modules>
