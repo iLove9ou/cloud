@@ -1,7 +1,5 @@
 package com.cloud.gateway.business;
 
-
-
 import com.cloud.gateway.constants.Constants;
 import com.cloud.gateway.enums.CharsetEnum;
 import com.cloud.gateway.enums.SignTypeEnum;

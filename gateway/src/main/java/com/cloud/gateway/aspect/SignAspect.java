@@ -1,10 +1,6 @@
 package com.cloud.gateway.aspect;
 
-import com.cloud.gateway.annotation.Sign;
-import com.cloud.gateway.utils.SignUtil;
-import org.apache.commons.lang.ArrayUtils;
 import org.aspectj.lang.JoinPoint;
-import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.*;
 import org.aspectj.lang.reflect.MethodSignature;
 import org.springframework.stereotype.Component;
