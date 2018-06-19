@@ -1,4 +1,4 @@
-package service.model;
+package com.cloud.service.model;
 
 public class UserDO {
 

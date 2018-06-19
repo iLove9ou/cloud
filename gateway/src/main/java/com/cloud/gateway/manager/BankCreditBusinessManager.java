@@ -1,7 +1,6 @@
 package com.cloud.gateway.manager;
 
 import com.cloud.gateway.business.BankCreditBusiness;
-import cloudgateway.coudgateway.format.*;
 import com.cloud.gateway.format.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;

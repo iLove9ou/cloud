@@ -1,8 +1,8 @@
-package service.dao;
+package com.cloud.service.dao;
 
 
+import com.cloud.service.model.UserDO;
 import org.apache.ibatis.annotations.Mapper;
-import service.model.UserDO;
 
 @Mapper
 public interface UserDao {
