@@ -1,5 +1,6 @@
 package com.cloud.gateway.controller;
 
+import com.cloud.gateway.annotation.Sign;
 import com.cloud.gateway.format.Document;
 import com.cloud.gateway.manager.BankCreditBusinessManager;
 import com.cloud.gateway.mq.Producer;
@@ -21,6 +22,7 @@ public class Home {
     Producer producer;
 
     @PostMapping(value = "/credit_apply", consumes = "application/xml", produces = MediaType.APPLICATION_XML_VALUE)
+    @Sign
     public Document creditApply(@RequestBody User user00) {
         System.out.println(user00.getId() + ":" + user00.getName());
         return bankCreditBusinessManager.getDocument();

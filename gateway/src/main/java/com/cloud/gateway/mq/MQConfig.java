@@ -31,8 +31,6 @@ public class MQConfig {
 
 
 
-
-
     /*
      * 配置连接信息
      */
