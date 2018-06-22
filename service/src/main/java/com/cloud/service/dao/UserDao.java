@@ -1,7 +1,7 @@
 package com.cloud.service.dao;
 
 
-import com.cloud.service.model.UserDO;
+import com.cloud.service.model.entity.UserDO;
 import org.apache.ibatis.annotations.Mapper;
 
 @Mapper

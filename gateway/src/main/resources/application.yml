@@ -15,5 +15,3 @@ eureka:
 spring:
   application:
     name: gateway
-
-
