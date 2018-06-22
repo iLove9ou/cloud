@@ -20,14 +20,14 @@
                         password="${jdbc.password}">
         </jdbcConnection>
 
-        <javaModelGenerator targetPackage="${targetModelPackage}" targetProject="${targetJavaProject}"/>
+        <javaModelGenerator targetPackage="${targetModelPackage}" targetProject="${targetModelProject}"/>
 
-        <sqlMapGenerator targetPackage="${targetXMLPackage}"  targetProject="${targetResourcesProject}"/>
+        <sqlMapGenerator targetPackage="${targetXMLPackage}"  targetProject="${targetXMLProject}"/>
 
-        <javaClientGenerator targetPackage="${targetMapperPackage}" targetProject="${targetJavaProject}" type="XMLMAPPER" />
+        <javaClientGenerator targetPackage="${targetMapperPackage}" targetProject="${targetMapperProject}" type="XMLMAPPER" />
 
 
-        <table  tableName="rate_scales_patient" domainObjectName="RateScalesPatient">
+        <table  tableName="app_audit" domainObjectName="APPAudit">
             <property name="useActualColumnNames" value="false"></property>
         </table>
 
