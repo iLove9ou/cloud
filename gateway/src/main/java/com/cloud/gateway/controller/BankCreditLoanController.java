@@ -11,6 +11,7 @@ import com.cloud.gateway.request.MybankCreditLoanApproveUploadRequest;
 import com.cloud.gateway.request.MybankCreditLoanApproveackConfirmRequest;
 import com.cloud.gateway.request.MybankCreditLoanApproveackNotifyRequest;
 import com.cloud.gateway.vo.*;
+import com.google.gson.Gson;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -36,7 +37,7 @@ public class BankCreditLoanController {
     @Sign
     public Document apply_notify(@RequestBody MybankCreditLoanApplyNotifyRequest request) {
         MybankCreditLoanApplyNotifyResponse response = creditBankLoanClient.applyNotify(request);
-        logger.info("apply_notify " + ": " + response);
+        logger.info("apply_notify " + ": " + new Gson().toJson(response));
         return manager.getDocument();
     }
 
@@ -44,7 +45,7 @@ public class BankCreditLoanController {
     @Sign
     public Document approve_upload(@RequestBody MybankCreditLoanApproveUploadRequest request) {
         MybankCreditLoanApproveUploadResponse response = creditBankLoanClient.approveUpload(request);
-        logger.info("approve_upload " + ": " + response);
+        logger.info("approve_upload " + ": " + new Gson().toJson(response));
         return manager.getDocument();
     }
 
@@ -52,7 +53,7 @@ public class BankCreditLoanController {
     @Sign
     public Document approveack_notify(@RequestBody MybankCreditLoanApproveackNotifyRequest request) {
         MybankCreditLoanApproveackNotifyResponse response = creditBankLoanClient.approveackNotify(request);
-        logger.info("approveack_notify " + ": " + response);
+        logger.info("approveack_notify " + ": " + new Gson().toJson(response));
         return manager.getDocument();
     }
 
@@ -60,7 +61,7 @@ public class BankCreditLoanController {
     @Sign
     public Document approveack_confirm(@RequestBody MybankCreditLoanApproveackConfirmRequest request) {
         MybankCreditLoanApproveackConfirmResponse response = creditBankLoanClient.approveackConfirm(request);
-        logger.info("apply_notify " + ": " + response);
+        logger.info("apply_notify " + ": " + new Gson().toJson(response));
         return manager.getDocument();
     }
 }

@@ -8,7 +8,6 @@ import com.cloud.gateway.request.MybankCreditLoanApproveackNotifyRequest;
 import com.cloud.gateway.vo.MybankCreditLoanApplyNotifyResponse;
 import com.cloud.gateway.vo.MybankCreditLoanApproveUploadResponse;
 import com.cloud.gateway.vo.MybankCreditLoanApproveackNotifyResponse;
-import com.cloud.service.model.response.MybankCreditLoanApproveackConfirmResponse;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
