@@ -1,7 +1,7 @@
 package com.cloud.service.controller;
 
 import com.cloud.service.common.BaseController;
-import com.cloud.service.model.DTO.RoleDTO;
+import com.cloud.service.model.dto.RoleDTO;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 

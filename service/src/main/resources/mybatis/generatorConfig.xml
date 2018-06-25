@@ -27,6 +27,40 @@
         <javaClientGenerator targetPackage="${targetMapperPackage}" targetProject="${targetMapperProject}" type="XMLMAPPER" />
 
 
+
+        <table  tableName="app_audit" domainObjectName="APPAudit">
+            <property name="useActualColumnNames" value="false"></property>
+        </table>
+        <table  tableName="app_audit" domainObjectName="APPAudit">
+            <property name="useActualColumnNames" value="false"></property>
+        </table>
+        <table  tableName="app_audit" domainObjectName="APPAudit">
+            <property name="useActualColumnNames" value="false"></property>
+        </table>
+        <table  tableName="app_audit" domainObjectName="APPAudit">
+            <property name="useActualColumnNames" value="false"></property>
+        </table>
+        <table  tableName="app_audit" domainObjectName="APPAudit">
+            <property name="useActualColumnNames" value="false"></property>
+        </table>
+        <table  tableName="app_audit" domainObjectName="APPAudit">
+            <property name="useActualColumnNames" value="false"></property>
+        </table>
+        <table  tableName="app_audit" domainObjectName="APPAudit">
+            <property name="useActualColumnNames" value="false"></property>
+        </table>
+        <table  tableName="app_audit" domainObjectName="APPAudit">
+            <property name="useActualColumnNames" value="false"></property>
+        </table>
+        <table  tableName="app_audit" domainObjectName="APPAudit">
+            <property name="useActualColumnNames" value="false"></property>
+        </table>
+        <table  tableName="app_audit" domainObjectName="APPAudit">
+            <property name="useActualColumnNames" value="false"></property>
+        </table>
+        <table  tableName="app_audit" domainObjectName="APPAudit">
+            <property name="useActualColumnNames" value="false"></property>
+        </table>
         <table  tableName="app_audit" domainObjectName="APPAudit">
             <property name="useActualColumnNames" value="false"></property>
         </table>
