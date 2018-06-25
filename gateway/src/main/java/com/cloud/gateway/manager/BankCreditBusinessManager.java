@@ -1,6 +1,7 @@
 package com.cloud.gateway.manager;
 
 import com.cloud.gateway.business.BankCreditBusiness;
+import com.cloud.gateway.client.UserServiceClient;
 import com.cloud.gateway.format.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -10,6 +11,10 @@ public class BankCreditBusinessManager {
 
     @Autowired
     private BankCreditBusiness bankCreditBusiness;
+
+    @Autowired
+    private UserServiceClient userServiceClient;
+
 
     public Document getDocument() {
 

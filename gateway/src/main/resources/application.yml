@@ -1,17 +1,18 @@
 server:
   port: 8090
 
+spring:
+  application:
+    name: gateway
 
 eureka:
       instance:
         hostname: localhost
+        instance-id: ${spring.application.name}:${spring.application.instance_id:${server.port}}
       client:
         serviceUrl:
           registerWithEureka: true
           fetchRegistry: false
-          defaultZone: http://localhost:8081/eureka/
+          defaultZone: http://localhost:8083/eureka/
 
 
-spring:
-  application:
-    name: gateway
