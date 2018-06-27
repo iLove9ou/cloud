@@ -6,7 +6,7 @@
         <result column="name" property="name" jdbcType="VARCHAR" />
         <result column="mobile" property="mobile" jdbcType="VARCHAR" />
         <result column="email" property="email" jdbcType="VARCHAR" />
-        <result column="adress" property="adress" jdbcType="VARCHAR" />
+        <result column="address" property="adress" jdbcType="VARCHAR" />
     </resultMap>
 
 

@@ -1,5 +1,6 @@
 package com.cloud.service.controller;
 
+import com.cloud.service.format.Document;
 import com.cloud.service.model.request.MybankCreditLoanApplyNotifyRequest;
 import com.cloud.service.model.request.MybankCreditLoanApproveUploadRequest;
 import com.cloud.service.model.request.MybankCreditLoanApproveackConfirmRequest;
@@ -21,22 +22,22 @@ public class CreditBankLoanController {
     private CreditBankLoanService creditBankLoanService;
 
     @RequestMapping(value = "/applyNotify")
-    public MybankCreditLoanApplyNotifyResponse getUser(@RequestBody MybankCreditLoanApplyNotifyRequest request) {
-        return creditBankLoanService.applyNotify(request);
+    public Document getUser(@RequestBody Document document) {
+        return creditBankLoanService.applyNotify(document);
     }
 
     @RequestMapping(value = "/approveUpload")
-    public MybankCreditLoanApproveUploadResponse approveUpload(@RequestBody MybankCreditLoanApproveUploadRequest request) {
-        return creditBankLoanService.approveUpload(request);
+    public Document approveUpload(@RequestBody Document document) {
+        return creditBankLoanService.approveUpload(document);
     }
 
     @RequestMapping(value = "/approveackNotify")
-    public MybankCreditLoanApproveackNotifyResponse approveackNotify(@RequestBody MybankCreditLoanApproveackNotifyRequest request) {
-        return creditBankLoanService.finalNotify(request);
+    public Document approveackNotify(@RequestBody Document document) {
+        return creditBankLoanService.finalNotify(document);
     }
 
     @RequestMapping(value = "/approveackConfirm")
-    public MybankCreditLoanApproveackConfirmResponse approveackConfirm(@RequestBody MybankCreditLoanApproveackConfirmRequest request) {
-        return creditBankLoanService.finalConfirm(request);
+    public Document approveackConfirm(@RequestBody Document document) {
+        return creditBankLoanService.finalConfirm(document);
     }
 }

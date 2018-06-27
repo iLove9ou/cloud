@@ -1,4 +1,4 @@
-package com.cloud.gateway.format;
+package com.cloud.service.format;
 
 import java.io.Serializable;
 

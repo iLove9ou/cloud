@@ -22,7 +22,6 @@ eureka:
           defaultZone: http://localhost:8083/eureka/
 
 
-
 mybatis:
       typeAliasesPackage: service.model
       mapperLocations: classpath:/mapper/*.xml

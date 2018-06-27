@@ -1,5 +1,6 @@
 package com.cloud.service.service;
 
+import com.cloud.service.format.Document;
 import com.cloud.service.model.request.MybankCreditLoanApplyNotifyRequest;
 import com.cloud.service.model.request.MybankCreditLoanApproveUploadRequest;
 import com.cloud.service.model.request.MybankCreditLoanApproveackConfirmRequest;
@@ -14,20 +15,20 @@ public interface CreditBankLoanService {
     /*
      * 初审通知请求，网商银行-银行机构
      */
-    public MybankCreditLoanApplyNotifyResponse applyNotify(MybankCreditLoanApplyNotifyRequest request);
+    public Document applyNotify(Document document);
 
     /*
      * 初审数据上传，银行机构-网商银行
      */
-    public MybankCreditLoanApproveUploadResponse approveUpload(MybankCreditLoanApproveUploadRequest request);
+    public Document approveUpload(Document document);
     /*
      * 终审通知，网商银行-银行机构
      */
-    public MybankCreditLoanApproveackNotifyResponse finalNotify(MybankCreditLoanApproveackNotifyRequest request);
+    public Document finalNotify(Document document);
 
     /*
      * 终审确认，银行机构-网商银行
      */
-    public MybankCreditLoanApproveackConfirmResponse finalConfirm(MybankCreditLoanApproveackConfirmRequest request);
+    public Document finalConfirm(Document document);
 
 }

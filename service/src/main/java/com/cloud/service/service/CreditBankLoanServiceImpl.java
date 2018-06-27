@@ -1,56 +1,83 @@
 package com.cloud.service.service;
 
-import com.cloud.service.model.request.MybankCreditLoanApplyNotifyRequest;
-import com.cloud.service.model.request.MybankCreditLoanApproveUploadRequest;
-import com.cloud.service.model.request.MybankCreditLoanApproveackConfirmRequest;
-import com.cloud.service.model.request.MybankCreditLoanApproveackNotifyRequest;
+import com.cloud.service.enums.BizErrorCode;
+import com.cloud.service.format.Document;
+import com.cloud.service.format.ResultInfo;
+import com.cloud.service.manager.BankCreditHandler;
 import com.cloud.service.model.response.MybankCreditLoanApplyNotifyResponse;
 import com.cloud.service.model.response.MybankCreditLoanApproveUploadResponse;
 import com.cloud.service.model.response.MybankCreditLoanApproveackConfirmResponse;
 import com.cloud.service.model.response.MybankCreditLoanApproveackNotifyResponse;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
-public class CreditBankLoanServiceImpl implements CreditBankLoanService{
+public class CreditBankLoanServiceImpl implements CreditBankLoanService {
 
+    @Autowired
+    private BankCreditHandler handler;
     /*
      * 初审通知请求，网商银行-银行机构
      */
     @Override
-    public MybankCreditLoanApplyNotifyResponse applyNotify(MybankCreditLoanApplyNotifyRequest request) {
+    public Document applyNotify(Document document) {
 
         // TODO 发送请求
-        return new MybankCreditLoanApplyNotifyResponse();
+        String appId = "app";
+        String funcKey = "funcKey";
+        String sign = "sign";
+        ResultInfo info = new ResultInfo();
+        info.setResultCode(BizErrorCode.INVLID_SIGN.getCode());
+        info.setResultMsg(BizErrorCode.INVLID_SIGN.getMessage());
+        return handler.getDocuemnt(appId, funcKey, sign, info);
     }
 
     /*
      * 初审数据上传，银行机构-网商银行
      */
     @Override
-    public MybankCreditLoanApproveUploadResponse approveUpload(MybankCreditLoanApproveUploadRequest request) {
+    public Document approveUpload(Document document) {
 
         // TODO 发送请求
-        return new MybankCreditLoanApproveUploadResponse();
+        String appId = "app";
+        String funcKey = "funcKey";
+        String sign = "sign";
+        ResultInfo info = new ResultInfo();
+        info.setResultCode(BizErrorCode.SUCCESS.getCode());
+        info.setResultMsg(BizErrorCode.SUCCESS.getMessage());
+        return handler.getDocuemnt(appId, funcKey, sign, info);
     }
 
     /*
      * 终审通知，网商银行-银行机构
      */
     @Override
-    public MybankCreditLoanApproveackNotifyResponse finalNotify(MybankCreditLoanApproveackNotifyRequest request) {
+    public Document finalNotify(Document document) {
 
         // TODO 发送请求
-        return new MybankCreditLoanApproveackNotifyResponse();
+        String appId = "app";
+        String funcKey = "funcKey";
+        String sign = "sign";
+        ResultInfo info = new ResultInfo();
+        info.setResultCode(BizErrorCode.NOT_RECOGNIZE_KEY_ITEM.getCode());
+        info.setResultMsg(BizErrorCode.NOT_RECOGNIZE_KEY_ITEM.getMessage());
+        return handler.getDocuemnt(appId, funcKey, sign, info);
     }
 
     /*
      * 终审确认，银行机构-网商银行
      */
     @Override
-    public MybankCreditLoanApproveackConfirmResponse finalConfirm(MybankCreditLoanApproveackConfirmRequest request) {
+    public Document finalConfirm(Document document) {
 
         // TODO 发送请求
-        return new MybankCreditLoanApproveackConfirmResponse();
+        String appId = "app";
+        String funcKey = "funcKey";
+        String sign = "sign";
+        ResultInfo info = new ResultInfo();
+        info.setResultCode(BizErrorCode.PARAMS_ERROR.getCode());
+        info.setResultMsg(BizErrorCode.PARAMS_ERROR.getMessage());
+        return handler.getDocuemnt(appId, funcKey, sign, info);
     }
 
 }
