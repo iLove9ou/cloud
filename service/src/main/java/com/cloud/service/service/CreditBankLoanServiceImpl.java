@@ -2,6 +2,7 @@ package com.cloud.service.service;
 
 import com.cloud.service.enums.BizErrorCode;
 import com.cloud.service.format.Document;
+import com.cloud.service.format.DocumentInput;
 import com.cloud.service.format.ResultInfo;
 import com.cloud.service.manager.BankCreditHandler;
 import com.cloud.service.model.response.MybankCreditLoanApplyNotifyResponse;
@@ -20,7 +21,7 @@ public class CreditBankLoanServiceImpl implements CreditBankLoanService {
      * 初审通知请求，网商银行-银行机构
      */
     @Override
-    public Document applyNotify(Document document) {
+    public Document applyNotify(DocumentInput document) {
 
         // TODO 发送请求
         String appId = "app";
@@ -36,7 +37,7 @@ public class CreditBankLoanServiceImpl implements CreditBankLoanService {
      * 初审数据上传，银行机构-网商银行
      */
     @Override
-    public Document approveUpload(Document document) {
+    public Document approveUpload(DocumentInput document) {
 
         // TODO 发送请求
         String appId = "app";
@@ -52,7 +53,7 @@ public class CreditBankLoanServiceImpl implements CreditBankLoanService {
      * 终审通知，网商银行-银行机构
      */
     @Override
-    public Document finalNotify(Document document) {
+    public Document finalNotify(DocumentInput document) {
 
         // TODO 发送请求
         String appId = "app";
@@ -68,7 +69,7 @@ public class CreditBankLoanServiceImpl implements CreditBankLoanService {
      * 终审确认，银行机构-网商银行
      */
     @Override
-    public Document finalConfirm(Document document) {
+    public Document finalConfirm(DocumentInput document) {
 
         // TODO 发送请求
         String appId = "app";
